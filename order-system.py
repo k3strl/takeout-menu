@@ -68,21 +68,20 @@ place_order()
 
         # TODO: Write a conditional statement that checks if the customer types
         # 'n' or 'N'
-            if keep_ordering.lower() = 'n':
+        if keep_ordering.lower() == 'n':
             # Since the customer decided to stop ordering, thank them for
             # their order
             print("Thank you for your order.")
 
             # TODO: Use a list comprehension to create a list called prices_list,
             # which contains the total prices for each item in the order list:
-
             # #FIXME - The total price for each item should multiply the price by quantity
-            # 
+            # price and quantity are strings
             prices_list = [item["price"] * item["quantity"] for item in order]
 
             # TODO: Create an order_total from the prices list using sum()
             # and round the prices to 2 decimal places.
-            order_total = (round stuff here)
+            order_total = round(sum(prices_list), 2)
 
             # Write a break statement or set the condition to False to exit
             # the ordering loop
