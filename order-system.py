@@ -16,6 +16,18 @@ def place_order(menu):
     order (list): A list of dictionaries containing the menu item name, price,
                   and quantity ordered.
     order_total (float): The total price of the order.
+
+place_order()
+- Display the menu continuously until the customer decides to quit.
+- Ask for a menu number, validate it, then ask for the quantity of items.
+- Calculate the total order price and return both the order list and the total price.
+
+
+
+
+
+
+
     """
     # Set up order list. Order list will store a list of dictionaries for
     # menu item name, item price, and quantity ordered
@@ -25,21 +37,24 @@ def place_order(menu):
     menu_items = get_menu_items_dict(menu)
 
     # Launch the store and present a greeting to the customer
-    print("Welcome to the Generic Take Out Restaurant.")
+    print("Welcome to the Most Generic Take Out Restaurant.")
 
-    place_order = True
     # TODO: Create a continuous while loop so customers can order multiple items
-    
+    # index is 1 so that all options are numbered from 1, not 0
         # TODO: Loop through the menu dictionary, extracting the food category and
         # the options for each category
-
             # TODO: Loop through the options for each food category, extracting the
             # meal and the price
                 # TODO: Print the menu item number, food category, meal, and price
-
                 # TODO: Update the menu selection number
-                
-
+place_order = True
+index = 1
+for food_category, options in menu.items():
+    print(f"\n{food_category}:")
+    for meal, price in options.items():
+        print(f"{index}.{meal}-${price:.2f}")
+        index += 1
+        
         # Ask customer to input menu item number
         menu_selection = input("Type menu number: ")
 
