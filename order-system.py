@@ -39,22 +39,22 @@ place_order()
     # Launch the store and present a greeting to the customer
     print("Welcome to the Most Generic Take Out Restaurant.")
 
-    # TODO: Create a continuous while loop so customers can order multiple items
+    # : Create a continuous while loop so customers can order multiple items
     # index is 1 so that all options are numbered from 1, not 0
-        # TODO: Loop through the menu dictionary, extracting the food category and
+        # : Loop through the menu dictionary, extracting the food category and
         # the options for each category
-            # TODO: Loop through the options for each food category, extracting the
+            # : Loop through the options for each food category, extracting the
             # meal and the price
-                # TODO: Print the menu item number, food category, meal, and price
-                # TODO: Update the menu selection number
-place_order = True
-index = 1
-for food_category, options in menu.items():
-    print(f"\n{food_category}:")
-    for meal, price in options.items():
-        print(f"{index}.{meal}-${price:.2f}")
-        index += 1
-        
+                # : Print the menu item number, food category, meal, and price
+                # : Update the menu selection number
+    place_order = True
+    index = 1
+    for food_category, options in menu.items():
+        print(f"\n{food_category}:")
+        for meal, price in options.items():
+            print(f"{index}.{meal}-${price:.2f}")
+            index += 1
+            
         # Ask customer to input menu item number
         menu_selection = input("Type menu number: ")
 
@@ -68,15 +68,16 @@ for food_category, options in menu.items():
 
         # TODO: Write a conditional statement that checks if the customer types
         # 'n' or 'N'
-
+            if keep_ordering.lower() = 'n':
+                break
             # Since the customer decided to stop ordering, thank them for
             # their order
             print("Thank you for your order.")
 
             # TODO: Use a list comprehension to create a list called prices_list,
             # which contains the total prices for each item in the order list:
-            # The total price for each item should multiply the price by quantity
-
+            # #FIXME - The total price for each item should multiply the price by quantity
+            something = [expression for value in iterable if condition]
             # TODO: Create an order_total from the prices list using sum()
             # and round the prices to 2 decimal places.
 
