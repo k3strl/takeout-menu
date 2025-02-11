@@ -41,18 +41,18 @@ place_order()
 
     # : Create a continuous while loop so customers can order multiple items
     # index is 1 so that all options are numbered from 1, not 0
-        # : Loop through the menu dictionary, extracting the food category and
-        # the options for each category
-            # : Loop through the options for each food category, extracting the
-            # meal and the price
-                # : Print the menu item number, food category, meal, and price
-                # : Update the menu selection number
     place_order = True
     index = 1
+        # : Loop through the menu dictionary, extracting the food category and
+        # the options for each category
     for food_category, options in menu.items():
         print(f"\n{food_category}:")
+            # : Loop through the options for each food category, extracting the
+            # meal and the price
         for meal, price in options.items():
+                # : Print the menu item number, food category, meal, and price
             print(f"{index}.{meal}-${price:.2f}")
+                # : Update the menu selection number
             index += 1
             
         # Ask customer to input menu item number
@@ -75,7 +75,7 @@ place_order()
 
             # TODO: Use a list comprehension to create a list called prices_list,
             # which contains the total prices for each item in the order list:
-            # #FIXME - The total price for each item should multiply the price by quantity
+            # The total price for each item should multiply the price by quantity
             # price and quantity are strings
             prices_list = [item["price"] * item["quantity"] for item in order]
 
