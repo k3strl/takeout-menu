@@ -77,18 +77,18 @@ place_order()
             # which contains the total prices for each item in the order list:
 
             # #FIXME - The total price for each item should multiply the price by quantity
-            prices_list = [(price * quantity) for item in order]
+            prices_list = [item[price] * item[quantity] for item in order]
 
             # TODO: Create an order_total from the prices list using sum()
             # and round the prices to 2 decimal places.
-
+            order_total = (round stuff here)
 
             # Write a break statement or set the condition to False to exit
             # the ordering loop
             place_order = False
 
-    # TODO: Return the order list and the order total
-    
+    # : Return the order list and the order total
+    return order, order_total
 
 
 def update_order(order, menu_selection, menu_items):
