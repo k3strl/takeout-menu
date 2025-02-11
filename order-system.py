@@ -77,7 +77,8 @@ place_order()
             # which contains the total prices for each item in the order list:
 
             # #FIXME - The total price for each item should multiply the price by quantity
-            prices_list = [item[price] * item[quantity] for item in order]
+            # 
+            prices_list = [item["price"] * item["quantity"] for item in order]
 
             # TODO: Create an order_total from the prices list using sum()
             # and round the prices to 2 decimal places.
