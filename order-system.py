@@ -53,7 +53,6 @@ place_order()
         # : Loop through the menu dictionary, extracting the food category and
         # the options for each category
         for food_category, options in menu.items():
-            # print(f"\n{food_category}:")
             # : Loop through the options for each food category, extracting the
             # meal and the price
             for meal, price in options.items():
