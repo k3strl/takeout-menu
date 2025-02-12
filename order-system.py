@@ -42,18 +42,25 @@ place_order()
     # : Create a continuous while loop so customers can order multiple items
     # index is 1 so that all options are numbered from 1, not 0
     place_order = True
-    index = 1
+
+    while place_order:
+        print("What would you like to order? ")
+
+        # print menu
+        print_menu_heading()
+        
+        index = 1
         # : Loop through the menu dictionary, extracting the food category and
         # the options for each category
-    for food_category, options in menu.items():
-        print(f"\n{food_category}:")
+        for food_category, options in menu.items():
+            # print(f"\n{food_category}:")
             # : Loop through the options for each food category, extracting the
             # meal and the price
-        for meal, price in options.items():
+            for meal, price in options.items():
                 # : Print the menu item number, food category, meal, and price
-            print(f"{index}.{meal}-${price:.2f}")
+                print_menu_line(index, food_category, meal, price)
                 # : Update the menu selection number
-            index += 1
+                index += 1
             
         # Ask customer to input menu item number
         menu_selection = input("Type menu number: ")
@@ -90,7 +97,6 @@ place_order()
     # : Return the order list and the order total
     return order, order_total
 
-
 def update_order(order, menu_selection, menu_items):
     """
     Checks if the customer menu selection is valid, then updates the order.
@@ -118,7 +124,6 @@ def update_order(order, menu_selection, menu_items):
         item_price = menu_items[menu_selection]["Price"]
     except ValueError:
         print("Error: Invalid menu selection. Please enter a valid menu number.")
-
 
 
             # TODO: A prompt (input) to the customer that prints the name of the 
